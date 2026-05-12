@@ -220,6 +220,7 @@ section {
 .social-icons{
     display: flex;
     gap: 1.5rem;
+    margin-top: -1rem;
 }
 
 .btn-group {
