@@ -496,10 +496,9 @@ section {
 
 .services-container {
     display: grid;
-    grid-template-columns: repeat(5, 1fr);
-    align-items: center;
+    grid-template-columns: repeat(5, minmax(300px, 230px));
+    justify-content: center;
     gap: 1.5rem;
-    align-items: stretch;
 }
 
 .service-box {
@@ -550,31 +549,53 @@ section {
     background-color: var(--second-bg-color);
 }
 
-.contact h2{
-    margin-bottom: 3rem;
+.contact h2 {
+    margin-bottom: 4rem;
     color: var(--text-color);
 }
 
 .contact form {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    gap: 3rem;
-    margin: 5rem 0;
-    text-align: center;
+    max-width: 1200px;
+    margin: 0 auto;
 }
 
-.contact form .input-box input,
-.contact form .input-group-2 textarea {
+.contact-container {
+    display: grid;
+    grid-template-columns: 1fr 1.4fr;
+    gap: 5rem;
+    align-items: start;
+}
+
+.contact-left {
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+}
+
+.contact-left input,
+.contact-right textarea {
     width: 100%;
-    padding: 2.5rem;
-    font-size: 1.8rem;
+    padding: 2rem;
+    font-size: 1.6rem;
     color: var(--text-color);
     background-color: var(--bg-color);
-    border-radius: 2rem;
+    border-radius: 1.2rem;
     border: 2px solid var(--main-color);
-    margin:1.5rem 0;
+}
+
+.contact-right {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.contact-right textarea {
+    height: 320px;
     resize: none;
+}
+
+.contact-right .btn {
+    margin-top: 2rem;
 }
 
 .footer {
